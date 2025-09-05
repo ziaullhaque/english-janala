@@ -6,7 +6,7 @@ const createElements = (arr) => {
   return htmlElements.join(" ");
 };
 
-//
+//🔹 Speak Words
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
   utterance.lang = "en-EN"; // English
@@ -189,4 +189,16 @@ document.getElementById("btn-search").addEventListener("click", () => {
       // console.log(filterWords);
       displayLevelWord(filterWords);
     });
+});
+
+// 🔹 Scroll 
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener("click", (e) => {
+    const id = a.getAttribute("href").slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 });
