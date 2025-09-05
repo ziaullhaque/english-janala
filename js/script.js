@@ -191,7 +191,7 @@ document.getElementById("btn-search").addEventListener("click", () => {
     });
 });
 
-// 🔹 Scroll 
+// 🔹 Scroll
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
     const id = a.getAttribute("href").slice(1);
